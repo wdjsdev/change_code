@@ -100,7 +100,7 @@ function container()
 				var garCodeGroup = UI.group(inputGroup);
 					garCodeGroup.orientation = "row";
 					var garCodeDisp = UI.static(garCodeGroup,"Garment Code: (Top Right Corner of Mockup)");
-					var garCodeInput = UI.edit(garCodeGroup,garCodeText);
+					var garCodeInput = UI.edit(garCodeGroup,garCodeText.replace(/_\d{3,}$/i,""));
 						garCodeInput.characters = 20;
 				var garDescGroup = UI.group(inputGroup);
 					garDescGroup.orientation = "row";
